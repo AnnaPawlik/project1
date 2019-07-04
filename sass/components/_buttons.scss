@@ -1,0 +1,27 @@
+.btn {
+    width: 127px;
+    height: 40px;
+    border-radius: 3px;
+    color: $btn-text;
+    font-family: $brand-font;
+    font-size: 18px;
+    font-weight: 300;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-primary {
+    background-color: $btn-primary;
+
+    &:hover {
+        background-color: $links-hover;
+    }
+}
+
+.btn-secondary {
+    background-color: $brand-main-color;
+
+    &:hover {
+        background-color: $secondary;
+    }
+}
