@@ -1,6 +1,4 @@
 .btn {
-    width: 127px;
-    height: 40px;
     border-radius: 3px;
     color: $btn-text;
     font-family: $brand-font;
@@ -24,4 +22,14 @@
     &:hover {
         background-color: $secondary;
     }
+}
+
+.btn-sm {
+    width: 41px;
+    height: 40px;
+}
+
+.btn-lg {
+    width: 127px;
+    height: 40px;
 }
