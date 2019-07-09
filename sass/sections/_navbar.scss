@@ -1,0 +1,47 @@
+.navbar {
+    position: fixed;
+    background-color: $bgcolor-navbar;
+    height: 100vh;
+    float: left;
+
+    h3 {
+        color: #ffffff;
+        font-size: $large-font-size;
+        font-family: 'Dancing Script', cursive;
+        @include margin;
+    }
+
+    .navbar-menu {
+        color: $brand-main-color;
+        float: right;
+    }
+
+
+    .team-manager {
+        border-top: 1px solid $border;
+
+        h2 {
+            font-size: $small-font-size;
+            color: $brand-main-color;
+            text-transform: uppercase;
+            letter-spacing: -0.28px;
+            @include margin;
+        }
+
+        .manager {
+            font-size: $small-font-size;
+            color: $links;
+
+            img {
+                width: 43px;
+                height: 43px;
+                border-radius: 50%;
+            }
+
+            p {
+                display: inline-block;
+
+            }
+        }
+    }
+}

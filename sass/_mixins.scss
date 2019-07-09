@@ -1,0 +1,12 @@
+@mixin margin {
+    margin-left: 15px;
+    padding: 10px;
+}
+
+@mixin section_style {
+    border: 1px solid $border;
+    background-color: $bgcolor-section;
+    box-shadow: 2px 2px 2px $brand-main-color;
+    margin: 22px;
+    padding: 10px;
+}

@@ -1,0 +1,12 @@
+.list-group-item {
+    list-style-type: none;
+    padding: 10px;
+}
+
+a {
+    text-decoration: none;
+    font-size: $small-font-size;
+    color: $brand-main-color;
+    line-height: 42px;
+    @include margin;
+}

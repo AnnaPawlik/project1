@@ -2,3 +2,21 @@
 @import "mixins";
 @import "normalize";
 @import "layout";
+@import "components/buttons";
+@import "components/icons";
+@import "components/list_group";
+@import "sections/navbar";
+@import "sections/topbar";
+@import "sections/general_statistic";
+@import "sections/links";
+
+body {
+    font-family: $brand-font;
+    background-color: $bgcolor-body;
+}
+
+a {
+    &:hover {
+        color: $links-hover;
+    }
+}

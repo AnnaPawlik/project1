@@ -1,0 +1,11 @@
+img {
+    width: 14px;
+    height: 13px;
+    margin: 0px 10px;
+}
+
+.navbar {
+    img:not(.photo) {
+        filter: invert(60%);
+    }
+}
