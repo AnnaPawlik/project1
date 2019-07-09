@@ -3,6 +3,12 @@
     padding: 10px;
 }
 
+.list-group-horizontal {
+    .list-group-item {
+        border-left: 1px solid $border;
+    }
+}
+
 a {
     text-decoration: none;
     font-size: $small-font-size;

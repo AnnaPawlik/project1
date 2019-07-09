@@ -5,6 +5,7 @@
 @import "components/buttons";
 @import "components/icons";
 @import "components/list_group";
+@import "components/tables";
 @import "sections/navbar";
 @import "sections/topbar";
 @import "sections/general_statistic";
@@ -18,5 +19,17 @@ body {
 a {
     &:hover {
         color: $links-hover;
+    }
+}
+
+.section-header {
+    border-bottom: 1px solid $border;
+
+    .section-title {
+        text-transform: uppercase;
+        color: $brand-main-color;
+        line-height: 42px;
+        font-size: $small-font-size;
+        font-weight: bold;
     }
 }

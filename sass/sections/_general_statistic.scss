@@ -1,4 +1,25 @@
 .general-statistic {
     @include section_style;
+}
 
+.calendar {
+    p {
+        display: inline-block;
+        border: 1px solid $border;
+        padding: 10px 30px 10px 10px;
+    }
+}
+
+.graph-chart {
+    padding: 20px 0px;
+
+    .graph-title {
+        font-size: $medium-font-size;
+        color: $brand-main-color;
+    }
+
+    .graph {
+        margin-top: 30px;
+        width: 100%;
+    }
 }

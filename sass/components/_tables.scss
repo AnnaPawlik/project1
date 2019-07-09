@@ -1,0 +1,23 @@
+.table {
+    background-color: transparent;
+    margin: 24px 0px;
+    width: 100%;
+
+    td {
+        font-size: $medium-font-size;
+        font-family: $brand-font;
+        color: $brand-main-color;
+        border-bottom: 1px solid $border;
+        line-height: 17px;
+        padding: 5px 50px 5px 10px;
+
+        &:hover {
+            background-color: $table-hover;
+        }
+    }
+
+    a {
+
+        color: $links;
+    }
+}
