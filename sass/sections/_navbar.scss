@@ -1,21 +1,32 @@
 .navbar {
     position: fixed;
+    top: 0;
+    left: 0;
     background-color: $bgcolor-navbar;
     height: 100vh;
     float: left;
+
 
     h3 {
         color: #ffffff;
         font-size: $large-font-size;
         font-family: 'Dancing Script', cursive;
+        line-height: 50px;
         @include margin;
+
     }
 
     .navbar-menu {
-        color: $brand-main-color;
-        float: right;
+        position: absolute;
+        top: 0px;
+        right: 30px;
+        font-size: $large-font-size;
+        line-height: 50px;
     }
 
+    .icon {
+        filter: invert(60%);
+    }
 
     .team-manager {
         border-top: 1px solid $secondary;
@@ -25,14 +36,17 @@
             color: $brand-main-color;
             text-transform: uppercase;
             letter-spacing: -0.28px;
+            margin-top: 10px;
             @include margin;
         }
 
         .manager {
+            position: relative;
             font-size: $small-font-size;
             color: $links;
+            @include margin;
 
-            img {
+            .photo {
                 width: 43px;
                 height: 43px;
                 border-radius: 50%;
@@ -40,7 +54,9 @@
 
             p {
                 display: inline-block;
-
+                position: absolute;
+                top: 25px;
+                left: 50px;
             }
         }
     }

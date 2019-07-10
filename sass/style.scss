@@ -17,6 +17,13 @@ body {
 }
 
 a {
+    text-decoration: none;
+    font-size: $small-font-size;
+    color: $brand-main-color;
+    line-height: 30px;
+    margin-left: 15px;
+    padding: 10px 0px;
+
     &:hover {
         color: $links-hover;
     }

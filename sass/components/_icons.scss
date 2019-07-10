@@ -1,11 +1,9 @@
-img:not(.graph) {
-    width: 14px;
-    height: 13px;
+.icon {
+    width: 16px;
+    height: 14px;
     margin: 0px 10px;
 }
 
-.navbar {
-    img:not(.photo) {
-        filter: invert(60%);
-    }
+.icon-table-hover {
+    display: none;
 }

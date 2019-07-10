@@ -1,6 +1,8 @@
 .list-group-item {
     list-style-type: none;
     padding: 10px;
+
+
 }
 
 .list-group-horizontal {
@@ -9,10 +11,14 @@
     }
 }
 
-a {
-    text-decoration: none;
-    font-size: $small-font-size;
-    color: $brand-main-color;
-    line-height: 42px;
-    @include margin;
+.list-hover {
+    &:hover {
+        background-color: $list-hover;
+        border-left: 3px solid $links-hover;
+        cursor: pointer;
+
+        a {
+            color: $links-hover;
+        }
+    }
 }
