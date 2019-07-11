@@ -3,11 +3,20 @@
     padding: 10px 0px;
 }
 
-
 @mixin section_style {
     border: 1px solid $border;
     background-color: $bgcolor-section;
     box-shadow: 2px 2px 2px $brand-main-color;
     margin: 60px 20px;
     padding: 20px;
+}
+
+@mixin grid($prefix) {
+    @for $i from 1 through 12 {
+        .col-#{$prefix}-#{$i} {
+            $width: 100% / 12 * $i;
+            flex: 0 0 $width;
+            max-width: $width;
+        }
+    }
 }
