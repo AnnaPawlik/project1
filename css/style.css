@@ -1142,7 +1142,7 @@ template {
     left: -150px;
   }
   .navbar-menu {
-    left: 150px;
+    left: 200px;
   }
 }
 
@@ -1162,8 +1162,8 @@ template {
   background-color: #ffffff;
   -webkit-box-shadow: 2px 2px 2px #979797;
           box-shadow: 2px 2px 2px #979797;
-  margin: 60px 20px;
-  padding: 20px;
+  margin: 60px 10px 10px 10px;
+  padding: 15px;
 }
 
 .calendar p {
@@ -1192,8 +1192,8 @@ template {
   background-color: #ffffff;
   -webkit-box-shadow: 2px 2px 2px #979797;
           box-shadow: 2px 2px 2px #979797;
-  margin: 60px 20px;
-  padding: 20px;
+  margin: 60px 10px 10px 10px;
+  padding: 15px;
 }
 
 body {
