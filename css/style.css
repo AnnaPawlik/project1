@@ -1074,6 +1074,7 @@ template {
   position: fixed;
   top: 0;
   left: 0;
+  z-index: 1;
   background-color: #191919;
   height: 100vh;
   float: left;
@@ -1084,7 +1085,7 @@ template {
   font-size: 30px;
   font-family: 'Dancing Script', cursive;
   line-height: 50px;
-  margin-left: 34px;
+  margin-left: 10px;
   padding: 10px 0px;
 }
 
@@ -1111,7 +1112,7 @@ template {
   text-transform: uppercase;
   letter-spacing: -0.28px;
   margin-top: 10px;
-  margin-left: 34px;
+  margin-left: 10px;
   padding: 10px 0px;
 }
 
@@ -1119,7 +1120,7 @@ template {
   position: relative;
   font-size: 14px;
   color: #56819F;
-  margin-left: 34px;
+  margin-left: 10px;
   padding: 10px 0px;
 }
 
@@ -1149,6 +1150,7 @@ template {
   position: fixed;
   background-color: #ffffff;
   border: 1px solid #E3E3E3;
+  z-index: 0;
 }
 
 .topbar .list-group-item {
@@ -1204,7 +1206,6 @@ a {
   font-size: 14px;
   color: #979797;
   line-height: 30px;
-  margin-left: 15px;
   padding: 10px 0px;
 }
 
