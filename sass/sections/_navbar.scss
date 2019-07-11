@@ -6,7 +6,6 @@
     height: 100vh;
     float: left;
 
-
     h3 {
         color: #ffffff;
         font-size: $large-font-size;
@@ -59,5 +58,15 @@
                 left: 50px;
             }
         }
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        left: -150px;
+    }
+
+    .navbar-menu {
+        left: 150px;
     }
 }
