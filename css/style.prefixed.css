@@ -47,8 +47,7 @@ h1 {
    * 2. Show the overflow in Edge and IE.
    */
 hr {
-  -webkit-box-sizing: content-box;
-          box-sizing: content-box;
+  box-sizing: content-box;
   /* 1 */
   height: 0;
   /* 1 */
@@ -233,8 +232,7 @@ fieldset {
    *    `fieldset` elements in all browsers.
    */
 legend {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   /* 1 */
   color: inherit;
   /* 2 */
@@ -268,8 +266,7 @@ textarea {
    */
 [type="checkbox"],
 [type="radio"] {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   /* 1 */
   padding: 0;
   /* 2 */
@@ -347,8 +344,7 @@ template {
 * {
   margin: 0;
   padding: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 .container {
@@ -754,13 +750,10 @@ template {
 }
 
 .table {
-  display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   -ms-flex-pack: distribute;
@@ -769,7 +762,6 @@ template {
 }
 
 .table .table-row {
-  display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   width: 100%;
@@ -786,16 +778,14 @@ template {
 .table .table-item {
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  -webkit-box-flex: 0;
-      -ms-flex-positive: 0;
-          flex-grow: 0;
+  -ms-flex-positive: 0;
+      flex-grow: 0;
   -ms-flex-negative: 1;
       flex-shrink: 1;
   -ms-flex-preferred-size: 100%;
       flex-basis: 100%;
   width: 100%;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   border-bottom: 1px solid #E3E3E3;
   padding: 10px;
   font-size: 16px;
@@ -810,10 +800,8 @@ template {
 
 @media (max-width: 767px) {
   .table-row {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
   }
   .table-item {
     text-align: center;
@@ -828,7 +816,6 @@ template {
   background-color: #191919;
   height: 100vh;
   float: left;
-  -webkit-transition: all .3s ease-in-out;
   transition: all .3s ease-in-out;
 }
 
@@ -854,8 +841,7 @@ template {
 }
 
 .navbar .icon {
-  -webkit-filter: invert(60%);
-          filter: invert(60%);
+  filter: invert(60%);
 }
 
 .navbar .team-manager {
@@ -922,8 +908,7 @@ template {
 .general-statistic {
   border: 1px solid #E3E3E3;
   background-color: #ffffff;
-  -webkit-box-shadow: 2px 2px 2px #979797;
-          box-shadow: 2px 2px 2px #979797;
+  box-shadow: 2px 2px 2px #979797;
   margin: 50px 10px;
   padding: 15px;
 }
@@ -952,8 +937,7 @@ template {
 .links {
   border: 1px solid #E3E3E3;
   background-color: #ffffff;
-  -webkit-box-shadow: 2px 2px 2px #979797;
-          box-shadow: 2px 2px 2px #979797;
+  box-shadow: 2px 2px 2px #979797;
   margin: 50px 10px;
   padding: 15px;
 }
@@ -1003,4 +987,4 @@ a:hover {
     font-size: 16px;
   }
 }
-/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=style.prefixed.css.map */

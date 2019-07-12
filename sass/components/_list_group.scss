@@ -11,6 +11,8 @@
 }
 
 .list-hover {
+    border-left: 3px solid transparent;
+
     &:hover {
         background-color: $list-hover;
         border-left: 3px solid $links-hover;

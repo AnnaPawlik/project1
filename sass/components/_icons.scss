@@ -7,3 +7,9 @@
 .icon-table-hover {
     display: none;
 }
+
+@media (max-width: 767px) {
+    .icon-table-hover {
+        display: inline-block;
+    }
+}

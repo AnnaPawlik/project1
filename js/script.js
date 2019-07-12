@@ -1,5 +1,5 @@
 function toggleMenu(visible) {
-    document.querySelector('.navbar-menu').classList.toggle('show', visible)
+    document.querySelector('.navbar').classList.toggle('hide', visible)
 }
 
 document.querySelector('.navbar-menu').addEventListener('click', function (e) {

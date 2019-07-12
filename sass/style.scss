@@ -21,7 +21,6 @@ a {
     font-size: $small-font-size;
     color: $brand-main-color;
     line-height: 30px;
-    // margin-left: 15px;
     padding: 10px 0px;
 
     &:hover {
@@ -50,4 +49,10 @@ a {
 .scroll-wrapper .table {
     width: 100%;
     max-width: 100%;
+}
+
+@media (max-width: 767px) {
+    a {
+        font-size: $medium-font-size;
+    }
 }
