@@ -30,6 +30,7 @@ a {
 
 .section-header {
     border-bottom: 1px solid $border;
+    width: 100%;
 
     .section-title {
         text-transform: uppercase;
@@ -54,5 +55,9 @@ a {
 @media (max-width: 767px) {
     a {
         font-size: $medium-font-size;
+    }
+
+    .section-title {
+        text-align: center;
     }
 }

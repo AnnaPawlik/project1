@@ -8,3 +8,9 @@
         display: inline-block;
     }
 }
+
+@media (max-width: 767px) {
+    .topbar {
+        display: none;
+    }
+}
