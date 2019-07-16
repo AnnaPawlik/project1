@@ -39,9 +39,11 @@
 }
 
 @media (max-width: 767px) {
-    // .table-row {
-    //     flex-direction: column;
-    // }
+    .links {
+        .table-row {
+            flex-direction: column;
+        }
+    }
 
     .table-item {
         text-align: center;

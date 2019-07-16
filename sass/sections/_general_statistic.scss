@@ -32,5 +32,15 @@
 @media (max-width:767px) {
     .calendar {
         text-align: center;
+
+        p {
+            padding: 5px;
+        }
+    }
+}
+
+@media (max-width:767px) {
+    .general-statistic {
+        margin: 5px 10px;
     }
 }

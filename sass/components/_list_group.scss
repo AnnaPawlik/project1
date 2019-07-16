@@ -5,6 +5,8 @@
 }
 
 .list-group-horizontal {
+    float: right;
+
     .list-group-item {
         border-left: 1px solid $border;
     }

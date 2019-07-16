@@ -1,3 +1,9 @@
 .links {
     @include section_style;
 }
+
+@media (max-width:767px) {
+    .links {
+        margin: 5px 10px;
+    }
+}
