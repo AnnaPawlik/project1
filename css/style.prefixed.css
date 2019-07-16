@@ -754,6 +754,12 @@ template {
   color: #FFA200;
 }
 
+@media (min-width: 768px) and (max-width: 992px) {
+  .list-group-item {
+    text-align: center;
+  }
+}
+
 .table {
   display: -ms-flexbox;
   display: flex;
@@ -825,7 +831,7 @@ template {
 }
 
 .navbar.hide {
-  left: -150px;
+  left: -200px;
 }
 
 .navbar h3 {
@@ -884,15 +890,19 @@ template {
 @media (max-width: 767px) {
   .navbar {
     position: absolute;
-    left: -130px;
+    left: -250px;
   }
   .navbar.hide {
-    right: 480px;
+    left: 0px;
+    text-align: center;
+  }
+  .navbar.hide .icon {
+    display: none;
   }
   .navbar-menu i {
     position: absolute;
     top: 0px;
-    left: 160px;
+    left: 280px;
   }
 }
 

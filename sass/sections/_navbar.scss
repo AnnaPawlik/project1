@@ -9,7 +9,7 @@
     transition: all .3s ease-in-out;
 
     &.hide {
-        left: -150px;
+        left: -200px;
     }
 
     h3 {
@@ -72,17 +72,22 @@
 @media (max-width: 767px) {
     .navbar {
         position: absolute;
-        left: -130px;
+        left: -250px;
 
         &.hide {
-            right: 480px;
+            left: 0px;
+            text-align: center;
+
+            .icon {
+                display: none;
+            }
         }
     }
 
     .navbar-menu i {
         position: absolute;
         top: 0px;
-        left: 160px;
+        left: 280px;
     }
 }
 
