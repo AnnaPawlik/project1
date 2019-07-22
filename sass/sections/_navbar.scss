@@ -9,7 +9,7 @@
     transition: all .3s ease-in-out;
 
     &.hide {
-        left: -200px;
+        left: -250px;
     }
 
     h3 {
@@ -80,6 +80,12 @@
 
             .icon {
                 display: none;
+            }
+
+            .navbar-menu i {
+                position: absolute;
+                top: 10px;
+                left: 180px;
             }
         }
     }
