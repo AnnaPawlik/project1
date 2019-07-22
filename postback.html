@@ -35,7 +35,7 @@
                 <a href="personaldata.html"><img class="icon" src="images/icons/personaldata.svg">Personal data</a>
             </li>
             <li class="list-group-item list-hover">
-                <a href="#"><img class="icon" src="images/icons/payout.svg">Payout</a>
+                <a href="payout.html"><img class="icon" src="images/icons/payout.svg">Payout</a>
             </li>
             <li class="list-group-item list-hover">
                 <a href="postback.html"><img class="icon" src="images/icons/postback.svg">Postback</a>
@@ -87,9 +87,9 @@
                     <form action="" method="POST">
                         <div class="field">
                             <label>Sign up</label>
-                            <textarea name="signup">crm_userId=%user_id% subid=%p%"</textarea>
+                            <textarea name="signup" placeholder="crm_userId=%user_id% subid=%p%"></textarea>
                             <label>Deposit</label>
-                            <textarea name="deposit">crm_userId=%user_id% subid=%p%"</textarea>
+                            <textarea name="deposit" placeholder="crm_userId=%user_id% subid=%p%"></textarea>
                         </div>
                     </form>
                     <form action="" method="POST">
@@ -117,9 +117,8 @@
                         </div>
                     </form>
                     <form action="" method="POST">
-                        <!-- <div class="field"> -->
-                        <label>Not send statuses</label>
                         <div class="field">
+                            <label>Not send statuses</label>
                             <label>
                                 <input type="checkbox" name="statuses">
                                 <div class="icon"></div>checkNumber
@@ -136,6 +135,8 @@
                                 <input type="checkbox" name="statuses">
                                 <div class="icon"></div>CallAgain
                             </label>
+                            <label>Send after:</label>
+                            <input type="range" min="0" max="168" value="104" step="1">
                         </div>
                     </form>
                 </div>
