@@ -820,7 +820,7 @@ template {
 }
 
 form {
-  padding: 10px;
+  padding: 20px 10px;
   border-bottom: 1px solid #E3E3E3;
 }
 
@@ -829,21 +829,28 @@ form .field {
   display: flex;
   -ms-flex-pack: center;
       justify-content: center;
+  -ms-flex-align: center;
+      align-items: center;
   padding: 10px;
 }
 
 form .field label {
-  font-size: 16px;
+  font-size: 14px;
   font-family: "Roboto", sans-serif;
   font-weight: bold;
   color: #979797;
-  width: 100px;
-  margin-right: 30px;
+  width: 120px;
+  margin-right: 10px;
 }
 
 input {
   padding: 5px 10px;
-  font-size: 16px;
+  font-size: 14px;
+}
+
+input:focus {
+  outline: none;
+  border: 2px solid #F58220;
 }
 
 .navbar {

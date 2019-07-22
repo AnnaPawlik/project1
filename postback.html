@@ -78,63 +78,70 @@
         <section class="links">
             <div class="row">
                 <div class="col-md-12 section-header">
-                    <h3 class="section-title">Personal data</h3>
+                    <h3 class="section-title">New postback</h3>
                 </div>
             </div>
             <div class="row">
                 <div class="col-md-12 col-sm-12">
+                    <p>You can insert some parameters in this postback:</p>
                     <form action="" method="POST">
                         <div class="field">
-                            <label>Name</label>
-                            <input type="text" name="name" placeholder="Leonardo">
-                        </div>
-                        <div class="field">
-                            <label>Surname</label>
-                            <input type="text" name="surname" placeholder="Dicaprio">
-                        </div>
-                        <div class="field">
-                            <label>Email</label>
-                            <input type="email" name="email" placeholder="leo@gmail.com">
-                        </div>
-                        <div class="field">
-                            <label>Phone number</label>
-                            <input type="text" name="phone_number" maxlength="9" placeholder="798 000 001">
+                            <label>Sign up</label>
+                            <textarea name="signup">crm_userId=%user_id% subid=%p%"</textarea>
+                            <label>Deposit</label>
+                            <textarea name="deposit">crm_userId=%user_id% subid=%p%"</textarea>
                         </div>
                     </form>
                     <form action="" method="POST">
                         <div class="field">
-                            <label>Skype</label>
-                            <input type="text" name="skype" placeholder="Leonardo.D">
-                        </div>
-                        <div class="field">
-                            <label>ICQ</label>
-                            <input type="text" name="icq">
-                        </div>
-                        <div class="field">
-                            <label>Msn</label>
-                            <input type="email" name="msn">
+                            <label>Postback type</label>
+                            <select name="postback_type">
+                                <option>S2S (http://..)</option>
+                                <option>S3S (http://..)</option>
+                                <option>S4S (http://..)</option>
+                            </select>
+                            <label>To countries</label>
+                            <select name="countries">
+                                <option>Select countries</option>
+                                <option>Poland</option>
+                                <option>Germany</option>
+                                <option>French</option>
+                                <option>Spain</option>
+                            </select>
+                            <label>Sending options:</label>
+                            <select name="countries">
+                                <option>Select</option>
+                                <option></option>
+                                <option></option>
+                            </select>
                         </div>
                     </form>
                     <form action="" method="POST">
+                        <!-- <div class="field"> -->
+                        <label>Not send statuses</label>
                         <div class="field">
-                            <label>Wallet</label>
-                            <input type="text" name="wallet">
-                        </div>
-                    </form>
-                    <form action="" method="POST">
-                        <div class="field">
-                            <label>Password</label>
-                            <input type="password" name="password">
-                        </div>
-                        <div class="field">
-                            <label>Repeat</label>
-                            <input type="password" name="password">
+                            <label>
+                                <input type="checkbox" name="statuses">
+                                <div class="icon"></div>checkNumber
+                            </label>
+                            <label>
+                                <input type="checkbox" name="statuses">
+                                <div class="icon"></div>noAnswer
+                            </label>
+                            <label>
+                                <input type="checkbox" name="statuses">
+                                <div class="icon"></div>noCall
+                            </label>
+                            <label>
+                                <input type="checkbox" name="statuses">
+                                <div class="icon"></div>CallAgain
+                            </label>
                         </div>
                     </form>
                 </div>
                 <div class="row">
                     <div class="col-md-12 col-sm-12 container-fluid">
-                        <input type="submit" name="save" value="Save" class="btn btn-primary btn-lg">
+                        <input type="submit" name="save" value="Create Pixel" class="btn btn-primary btn-lg">
                     </div>
                 </div>
             </div>
