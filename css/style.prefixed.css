@@ -833,7 +833,7 @@ template {
 }
 
 form {
-  padding: 20px 10px;
+  padding: 20px 0px;
   border-bottom: 1px solid #E3E3E3;
   width: 100%;
 }
@@ -848,7 +848,12 @@ form {
 }
 
 .form-inline {
-  display: inline-block;
+  width: 100%;
+}
+
+.form-checkbox {
+  border-right: 1px solid #E3E3E3;
+  overflow-y: scroll;
 }
 
 .field {
@@ -866,8 +871,28 @@ label {
   font-family: "Roboto", sans-serif;
   font-weight: bold;
   color: #979797;
-  width: 120px;
+  width: 130px;
   margin-right: 10px;
+  padding-bottom: 10px;
+}
+
+label input[type="checkbox"] {
+  position: absolute;
+  margin: 0;
+  width: 14px;
+  height: 14px;
+  opacity: 0;
+}
+
+label input[type="checkbox"] + .icon {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  border: 1px solid #E3E3E3;
+}
+
+label input[type="checkbox"]:checked + .icon {
+  background-color: #E3E3E3;
 }
 
 textarea {
@@ -876,7 +901,7 @@ textarea {
   color: #979797;
   font-size: 14px;
   width: 100%;
-  height: 150px;
+  height: 200px;
 }
 
 input {
@@ -890,6 +915,11 @@ input:focus {
   border: 2px solid #F58220;
 }
 
+input[type="range"] {
+  height: 188px;
+  width: 100%;
+}
+
 select {
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -898,12 +928,17 @@ select {
   padding: 5px 30px 5px 10px;
   font-size: 14px;
   display: block;
-  width: 200px;
+  width: 100%;
   border-radius: 0;
-  background-image: url(https://image.flaticon.com/icons/png/128/118/118738.png);
+  background-image: url("https://image.flaticon.com/icons/png/128/118/118738.png");
   background-size: 15px auto;
   background-repeat: no-repeat;
   background-position: right 5px center;
+}
+
+.label-statuses {
+  text-transform: uppercase;
+  color: #EA2027;
 }
 
 .navbar {
@@ -1032,6 +1067,7 @@ select {
   border: 1px solid #E3E3E3;
   padding: 10px 30px 10px 10px;
   margin: -3px;
+  font-family: "Open Sans", Helvetica, Arial;
 }
 
 .graph-chart {
@@ -1117,6 +1153,12 @@ a:hover {
 .scroll-wrapper .table {
   width: 100%;
   max-width: 100%;
+}
+
+.postback {
+  margin-top: 20px;
+  font-size: 14px;
+  font-family: "Open Sans", Helvetica, Arial;
 }
 
 @media (max-width: 767px) {

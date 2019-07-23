@@ -84,75 +84,104 @@
             </div>
             <div class="row">
                 <div class="col-md-12 col-sm-12">
-                    <p>You can insert some parameters in this postback:</p>
-                    <form class="form-inline" action="" method="POST">
-                        <div class="field">
-                            <label>Sign up</label>
-                            <textarea name="signup" placeholder="crm_userId=%user_id% subid=%p%"></textarea>
-                        </div>
+                    <p class="postback">You can insert some parameters in this postback:</p>
+                    <div class="col-md-6 col-sm-6">
+                        <form class="form-inline" action="" method="POST">
+                            <div class="field">
+                                <label>Sign up</label>
+                                <textarea name="signup" placeholder="crm_userId=%user_id% subid=%p%"></textarea>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="col-md-6 col-sm-6">
+                        <form class="form-inline" action="" method="POST">
+                            <div class="field">
+                                <label>Deposit</label>
+                                <textarea name="deposit" placeholder="crm_userId=%user_id% subid=%p%"></textarea>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="col-md-4 col-sm-4">
+                        <form class="form-inline" action="" method="POST">
+                            <div class="field">
+                                <label>Postback type</label>
+                                <select name="postback_type">
+                                    <option>S2S (http://..)</option>
+                                    <option>S3S (http://..)</option>
+                                    <option>S4S (http://..)</option>
+                                </select>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="col-md-4 col-sm-4">
+                        <form class="form-inline" action="" method="POST">
+                            <div class="field">
+                                <label>To countries</label>
+                                <select name="countries">
+                                    <option>Select countries</option>
+                                    <option>Poland</option>
+                                    <option>Germany</option>
+                                    <option>French</option>
+                                    <option>Spain</option>
+                                </select>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="col-md-4 col-sm-4">
+                        <form class="form-inline" action="" method="POST">
+                            <div class="field">
+                                <label>Sending options:</label>
+                                <select name="options">
+                                    <option>Select</option>
+                                    <option>Option 1</option>
+                                    <option>Option 2</option>
+                                </select>
+                            </div>
+                        </form>
+                    </div>
                     </form>
-                    <form class="form-inline" action="" method="POST">
-                        <div class="field">
-                            <label>Deposit</label>
-                            <textarea name="deposit" placeholder="crm_userId=%user_id% subid=%p%"></textarea>
-                        </div>
-                    </form>
-                    <form action="" method="POST">
-                        <div class="field">
-                            <label>Postback type</label>
-                            <select name="postback_type">
-                                <option>S2S (http://..)</option>
-                                <option>S3S (http://..)</option>
-                                <option>S4S (http://..)</option>
-                            </select>
-                        </div>
-                        <div class="field">
-                            <label>To countries</label>
-                            <select name="countries">
-                                <option>Select countries</option>
-                                <option>Poland</option>
-                                <option>Germany</option>
-                                <option>French</option>
-                                <option>Spain</option>
-                            </select>
-                        </div>
-                        <div class="field">
-                            <label>Sending options:</label>
-                            <select name="options">
-                                <option>Select</option>
-                                <option></option>
-                                <option></option>
-                            </select>
-                        </div>
-                    </form>
-                    <form class="form-inline" action="" method="POST">
-                        <div class="field">
-                            <label>Not send statuses</label>
-                            <label>
-                                <input type="checkbox" name="statuses">
-                                <div class="icon"></div>checkNumber
-                            </label>
-                            <label>
-                                <input type="checkbox" name="statuses">
-                                <div class="icon"></div>noAnswer
-                            </label>
-                            <label>
-                                <input type="checkbox" name="statuses">
-                                <div class="icon"></div>noCall
-                            </label>
-                            <label>
-                                <input type="checkbox" name="statuses">
-                                <div class="icon"></div>CallAgain
-                            </label>
-                        </div>
-                    </form>
-                    <form class="form-inline" action="" method="POST">
-                        <label>Send after:</label>
-                        <input type="range" min="0" max="168" value="104" step="1">
-                    </form>
+                    <div class="col-md-6 col-sm-6">
+                        <form class="form-inline form-checkbox" action="" method="POST">
+                            <div class="field">
+                                <label><span class="label-statuses">Not</span> send statuses</label>
+                            </div>
+                            <div class="field">
+                                <label>
+                                    <input type="checkbox" name="statuses">
+                                    <div class="icon"></div>checkNumber
+                                </label>
+                            </div>
+                            <div class="field">
+                                <label>
+                                    <input type="checkbox" name="statuses">
+                                    <div class="icon"></div>noAnswer
+                                </label>
+                            </div>
+                            <div class="field">
+                                <label>
+                                    <input type="checkbox" name="statuses">
+                                    <div class="icon"></div>noCall
+                                </label>
+                            </div>
+                            <div class="field">
+                                <label>
+                                    <input type="checkbox" name="statuses">
+                                    <div class="icon"></div>CallAgain
+                                </label>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="col-md-6 col-sm-6">
+                        <form class="form-inline" action="" method="POST">
+                            <div class="field">
+                                <label>Send after:</label>
+                                <input type="range" min="0" max="168" value="104" step="1">
+                            </div>
+                        </form>
+                    </div>
                 </div>
                 <div class="row">
-                    <div class="col-md-12 col-sm-12 container-fluid">
+                    <div class="col-offset-md-9 col-md-3 col-sm-12 container-fluid">
                         <input type="submit" name="save" value="Create Pixel" class="btn btn-primary btn-lg">
                     </div>
                 </div>

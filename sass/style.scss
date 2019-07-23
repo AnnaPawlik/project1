@@ -53,6 +53,12 @@ a {
     max-width: 100%;
 }
 
+.postback {
+    margin-top: 20px;
+    font-size: $small-font-size;
+    font-family: $paragraph-font;
+}
+
 @media (max-width: 767px) {
     a {
         font-size: $medium-font-size;
