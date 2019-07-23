@@ -1,17 +1,28 @@
 form {
     padding: 20px 10px;
     border-bottom: 1px solid $border;
+    width: 100%;
+}
+
+.form-horizontal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.form-inline {
+    display: inline-block;
 }
 
 .field {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    align-items: baseline;
+    flex-wrap: wrap;
     padding: 10px;
 }
 
 label {
-    // display: block;
     font-size: $small-font-size;
     font-family: $brand-font;
     font-weight: bold;
@@ -40,7 +51,6 @@ input {
     }
 }
 
-input[type="range"] {}
 
 select {
     -webkit-appearance: none;

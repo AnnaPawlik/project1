@@ -708,6 +708,7 @@ template {
 .btn-sm {
   width: 41px;
   height: 40px;
+  margin-left: 10px;
 }
 
 .btn-lg {
@@ -758,10 +759,21 @@ template {
   color: #FFA200;
 }
 
-@media (min-width: 768px) and (max-width: 992px) {
-  .list-group-item {
-    text-align: center;
-  }
+.pagination {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.pagination .list-group-item {
+  display: inline-block;
+}
+
+.pagination a {
+  padding: 10px;
+}
+
+.pagination a:hover {
+  background-color: #E3E3E3;
 }
 
 .table {
@@ -776,7 +788,7 @@ template {
       flex-wrap: wrap;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  margin-top: 15px;
+  margin: 30px 0px;
 }
 
 .table .table-row {
@@ -835,18 +847,35 @@ template {
 form {
   padding: 20px 10px;
   border-bottom: 1px solid #E3E3E3;
+  width: 100%;
+}
+
+.form-horizontal {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.form-inline {
+  display: inline-block;
 }
 
 .field {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   padding: 10px;
 }
 
@@ -969,15 +998,12 @@ select {
 @media (max-width: 767px) {
   .navbar {
     position: absolute;
-    left: -250px;
-    width: 70vw;
+    left: -500px;
+    width: 60vw;
   }
   .navbar.hide {
     left: 0px;
     text-align: center;
-  }
-  .navbar.hide .icon {
-    display: none;
   }
   .navbar.hide .navbar-menu i {
     position: absolute;
@@ -987,13 +1013,7 @@ select {
   .navbar-menu i {
     position: absolute;
     top: 0px;
-    left: 280px;
-  }
-}
-
-@media (min-width: 768px) and (max-width: 992px) {
-  .navbar h3 {
-    font-size: 20px;
+    left: 550px;
   }
 }
 
@@ -1032,6 +1052,7 @@ select {
   display: inline-block;
   border: 1px solid #E3E3E3;
   padding: 10px 30px 10px 10px;
+  margin: -3px;
 }
 
 .graph-chart {

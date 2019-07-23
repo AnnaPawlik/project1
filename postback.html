@@ -74,6 +74,7 @@
             </div>
         </div>
     </header>
+    <!-- Postback -->
     <div class="col-offset-md-2 col-md-10 col-sm-12 main-content">
         <section class="links">
             <div class="row">
@@ -84,10 +85,14 @@
             <div class="row">
                 <div class="col-md-12 col-sm-12">
                     <p>You can insert some parameters in this postback:</p>
-                    <form action="" method="POST">
+                    <form class="form-inline" action="" method="POST">
                         <div class="field">
                             <label>Sign up</label>
                             <textarea name="signup" placeholder="crm_userId=%user_id% subid=%p%"></textarea>
+                        </div>
+                    </form>
+                    <form class="form-inline" action="" method="POST">
+                        <div class="field">
                             <label>Deposit</label>
                             <textarea name="deposit" placeholder="crm_userId=%user_id% subid=%p%"></textarea>
                         </div>
@@ -100,6 +105,8 @@
                                 <option>S3S (http://..)</option>
                                 <option>S4S (http://..)</option>
                             </select>
+                        </div>
+                        <div class="field">
                             <label>To countries</label>
                             <select name="countries">
                                 <option>Select countries</option>
@@ -108,15 +115,17 @@
                                 <option>French</option>
                                 <option>Spain</option>
                             </select>
+                        </div>
+                        <div class="field">
                             <label>Sending options:</label>
-                            <select name="countries">
+                            <select name="options">
                                 <option>Select</option>
                                 <option></option>
                                 <option></option>
                             </select>
                         </div>
                     </form>
-                    <form action="" method="POST">
+                    <form class="form-inline" action="" method="POST">
                         <div class="field">
                             <label>Not send statuses</label>
                             <label>
@@ -135,9 +144,11 @@
                                 <input type="checkbox" name="statuses">
                                 <div class="icon"></div>CallAgain
                             </label>
-                            <label>Send after:</label>
-                            <input type="range" min="0" max="168" value="104" step="1">
                         </div>
+                    </form>
+                    <form class="form-inline" action="" method="POST">
+                        <label>Send after:</label>
+                        <input type="range" min="0" max="168" value="104" step="1">
                     </form>
                 </div>
                 <div class="row">

@@ -26,8 +26,19 @@
     }
 }
 
-@media (min-width: 768px) and (max-width:992px) {
+.pagination {
+    text-align: center;
+    margin-top: 20px;
+
     .list-group-item {
-        text-align: center;
+        display: inline-block;
+    }
+
+    a {
+        padding: 10px;
+
+        &:hover {
+            background-color: $primary;
+        }
     }
 }
