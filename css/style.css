@@ -776,6 +776,16 @@ template {
   background-color: #E3E3E3;
 }
 
+@media (max-width: 767px) {
+  .list-group {
+    margin-top: 10px;
+  }
+  .list-group-item {
+    text-align: center;
+    font-size: 30px;
+  }
+}
+
 .table {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -813,15 +823,13 @@ template {
   -webkit-box-flex: 0;
       -ms-flex-positive: 0;
           flex-grow: 0;
-  -ms-flex-negative: 1;
-      flex-shrink: 1;
   -ms-flex-preferred-size: 100%;
       flex-basis: 100%;
   width: 100%;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   border-bottom: 1px solid #E3E3E3;
-  padding: 10px;
+  padding: 10px 5px;
   font-size: 16px;
   font-family: "Roboto", sans-serif;
   color: #979797;
@@ -838,6 +846,12 @@ template {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+  }
+  .general-statistic .table-row {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
   }
   .table-item {
     text-align: center;
@@ -884,6 +898,10 @@ form {
   padding: 10px;
 }
 
+.range {
+  height: 234px;
+}
+
 label {
   font-size: 14px;
   font-family: "Roboto", sans-serif;
@@ -913,6 +931,49 @@ label input[type="checkbox"]:checked + .icon {
   background-color: #E3E3E3;
 }
 
+input[type="text"],
+[type="password"],
+[type="email"] {
+  padding: 5px 10px;
+  font-size: 14px;
+  border: 1px solid #E3E3E3;
+}
+
+input[type="text"]:focus,
+[type="password"]:focus,
+[type="email"]:focus {
+  outline: none;
+  border: 2px solid #F58220;
+}
+
+input[type="range"] {
+  height: 2px;
+  width: 100%;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-color: #E3E3E3;
+  outline: none;
+}
+
+input[type="range"]:focus {
+  outline: none;
+  border: 1px solid #F58220;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  position: relative;
+  top: 15px;
+  width: 0px;
+  height: 0px;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-bottom: 25px solid #F58220;
+}
+
 textarea {
   resize: none;
   border: 1px solid #E3E3E3;
@@ -920,22 +981,6 @@ textarea {
   font-size: 14px;
   width: 100%;
   height: 200px;
-}
-
-input {
-  padding: 5px 10px;
-  font-size: 14px;
-  border: 1px solid #E3E3E3;
-}
-
-input:focus {
-  outline: none;
-  border: 2px solid #F58220;
-}
-
-input[type="range"] {
-  height: 188px;
-  width: 100%;
 }
 
 select {
@@ -966,14 +1011,14 @@ select {
   z-index: 1;
   background-color: #191919;
   height: 100vh;
-  width: 300px;
+  width: 15vw;
   float: left;
   -webkit-transition: all .3s ease-in-out;
   transition: all .3s ease-in-out;
 }
 
 .navbar.hide {
-  left: -250px;
+  left: -150px;
 }
 
 .navbar h3 {
@@ -1043,12 +1088,25 @@ select {
   .navbar.hide .navbar-menu i {
     position: absolute;
     top: 10px;
-    left: 180px;
+    left: 150px;
+  }
+  .navbar h3 {
+    display: none;
+  }
+  .navbar .icon {
+    display: none;
   }
   .navbar-menu i {
-    position: absolute;
+    position: relative;
     top: 0px;
     left: 550px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+  .navbar {
+    height: 100vh;
+    width: 20vw;
   }
 }
 

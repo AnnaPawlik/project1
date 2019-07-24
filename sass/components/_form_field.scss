@@ -26,6 +26,10 @@ form {
     padding: 10px;
 }
 
+.range {
+    height: 234px;
+}
+
 label {
     font-size: $small-font-size;
     font-family: $brand-font;
@@ -55,16 +59,10 @@ label {
     }
 }
 
-textarea {
-    resize: none;
-    border: 1px solid $border;
-    color: $brand-main-color;
-    font-size: $small-font-size;
-    width: 100%;
-    height: 200px;
-}
 
-input {
+input[type="text"],
+[type="password"],
+[type="email"] {
     padding: 5px 10px;
     font-size: $small-font-size;
     border: 1px solid $border;
@@ -76,11 +74,41 @@ input {
 }
 
 input[type="range"] {
-    height: 188px;
+    height: 2px;
     width: 100%;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-color: $primary;
+    outline: none;
 
+    &:focus {
+        outline: none;
+        border: 1px solid $btn-primary;
+    }
 }
 
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    position: relative;
+    top: 15px;
+    width: 0px;
+    height: 0px;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-bottom: 25px solid $btn-primary;
+}
+
+textarea {
+    resize: none;
+    border: 1px solid $border;
+    color: $brand-main-color;
+    font-size: $small-font-size;
+    width: 100%;
+    height: 200px;
+}
 
 select {
     -webkit-appearance: none;
