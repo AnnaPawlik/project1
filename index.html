@@ -67,7 +67,16 @@
                             <a href="#"><img class="icon" src="images/icons/login.svg">Leonardo Dicaprio</a>
                         </li>
                         <li class="list-group-item">
-                            <a href="#"><img class="icon" src="images/icons/quit.svg"></a>
+                            <a href="#" class="quit" id="quit"><img class="icon" src="images/icons/quit.svg">
+                                <div class="overlay" id="overlay">
+                                    <div class="modal" id="myModal">
+                                        <div class="btn close js--close-modal">x</div>
+                                        <h3>Do you really want to Quit?</h3>
+                                        <button class="btn btn-secondary btn-lg js--close-modal">Cancel</button>
+                                        <button class="btn btn-primary btn-lg js--close-modal">Quit</button>
+                                    </div>
+                                </div>
+                            </a>
                         </li>
                     </ul>
                 </div>
