@@ -7,19 +7,6 @@ document.querySelector('.navbar-menu').addEventListener('click', function (e) {
     toggleMenu()
 });
 
-// Validate email
-document.querySelector('form').addEventListener('submit', function (event) {
-    var isFormValidate = true;
-
-    var emailAddressInput = event.target.querySelector('input[name="email_address"]')
-    if (emailAddressInput.value.indexOf('@') < 0) {
-        isFormValidate = false;
-        emailAddressInput.parentElement.querySelector('.error').innerHTML = 'Błędny adres e-mail';
-    }
-
-    return !isFormValidate ? event.preventDefault() : true;
-})
-
 // Modal
 function openModal(modal) {
     document.querySelectorAll('#overlay > *').forEach(function (modal) {
@@ -56,9 +43,9 @@ document.querySelector('#quit').addEventListener('click', function () {
     openModal('#myModal')
 })
 
-document.querySelector('.add-new').addEventListener('click', function () {
-    openModal('#modal_add')
-})
+// document.querySelector('.add-new').addEventListener('click', function () {
+//     openModal('#modal_add')
+// })
 
 // Chart
 var ctx = document.getElementById('myChart').getContext('2d');
@@ -96,3 +83,16 @@ var Chart = new Chart(ctx, {
         ]
     },
 });
+
+// Validate email
+// document.querySelector('form').addEventListener('submit', function (event) {
+//     var isFormValidate = true;
+
+//     var emailAddressInput = event.target.querySelector('input[name="email_address"]')
+//     if (emailAddressInput.value.indexOf('@') < 0) {
+//         isFormValidate = false;
+//         emailAddressInput.parentElement.querySelector('.error').innerHTML = 'Błędny adres e-mail';
+//     }
+
+//     return !isFormValidate ? event.preventDefault() : true;
+// })
