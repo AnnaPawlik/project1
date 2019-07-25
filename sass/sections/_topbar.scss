@@ -9,14 +9,36 @@
     }
 }
 
+.topbar_mobile {
+    display: none;
+}
+
 @media (max-width:767px) {
-    .topbar {
-        position: relative;
-        top: 0;
-        right: 0px;
+    .topbar_mobile {
+        display: block;
+
+        .icon {
+            display: block;
+            position: absolute;
+            right: 10px;
+            bottom: 15px;
+        }
+
+        .list-group {
+            width: 100%;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+        }
 
         .list-group-item {
-            font-size: 10px;
+            display: inline-block;
+            border: none;
+            padding: 5px;
         }
+    }
+
+    .topbar {
+        display: none;
     }
 }

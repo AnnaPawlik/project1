@@ -48,6 +48,32 @@
                 <p>Michael E.</p>
             </div>
         </div>
+        <div class="topbar_mobile">
+            <div class="container">
+                <div class="row">
+                    <ul class="list-group list-group-horizontal">
+                        <li class="list-group-item">
+                            <a href="#">$1,500.00</a>
+                        </li>
+                        <li class="list-group-item">
+                            <a href="#">Leonardo Dicaprio</a>
+                        </li>
+                        <li class="list-group-item">
+                            <a href="#" class="quit" id="quit"><img class="icon" src="images/icons/quit.svg">
+                                <div class="overlay" id="overlay">
+                                    <div class="modal" id="myModal">
+                                        <!-- <div class="btn close js--close-modal">x</div> -->
+                                        <h3>Do you really want to Quit?</h3>
+                                        <button class="btn btn-secondary btn-lg  js--close-modal">Cancel</button>
+                                        <button class="btn btn-primary btn-lg js--close-modal">Quit</button>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
     </nav>
     <!-- Topbar -->
     <header class="col-md-12 col-sm-12 topbar">
@@ -72,7 +98,7 @@
                                     <div class="modal" id="myModal">
                                         <!-- <div class="btn close js--close-modal">x</div> -->
                                         <h3>Do you really want to Quit?</h3>
-                                        <button class="btn btn-secondary btn-lg  js--close-modal">Cancel</button>
+                                        <button class="btn btn-secondary btn-lg js--close-modal">Cancel</button>
                                         <button class="btn btn-primary btn-lg js--close-modal">Quit</button>
                                     </div>
                                 </div>
@@ -92,7 +118,7 @@
             </div>
             <div class="row">
                 <div class="col-md-12 col-sm-12">
-                    <form class="form-horizontal" action="" method="POST">
+                    <form class="form-horizontal" action="" method="POST" novalidate>
                         <div class="field">
                             <label>Name</label>
                             <input type="text" name="name" placeholder="Leonardo">
@@ -102,8 +128,9 @@
                             <input type="text" name="surname" placeholder="Dicaprio">
                         </div>
                         <div class="field">
-                            <label>Email</label>
-                            <input type="email" name="email" placeholder="leo@gmail.com">
+                            <label for="mail">Email</label>
+                            <input type="email" id="mail" name="email_address" placeholder="leo@gmail.com" required>
+                            <span class="error"></span>
                         </div>
                         <div class="field">
                             <label>Phone number</label>

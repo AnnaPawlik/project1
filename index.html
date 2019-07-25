@@ -48,10 +48,36 @@
                 <p>Michael E.</p>
             </div>
         </div>
+        <div class="topbar_mobile">
+            <div class="container">
+                <div class="row">
+                    <ul class="list-group list-group-horizontal">
+                        <li class="list-group-item">
+                            <a href="#">$1,500.00</a>
+                        </li>
+                        <li class="list-group-item">
+                            <a href="#">Leonardo Dicaprio</a>
+                        </li>
+                        <li class="list-group-item">
+                            <a href="#" class="quit" id="quit"><img class="icon" src="images/icons/quit.svg">
+                                <div class="overlay" id="overlay">
+                                    <div class="modal" id="myModal">
+                                        <!-- <div class="btn close js--close-modal">x</div> -->
+                                        <h3>Do you really want to Quit?</h3>
+                                        <button class="btn btn-secondary btn-lg  js--close-modal">Cancel</button>
+                                        <button class="btn btn-primary btn-lg js--close-modal">Quit</button>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
     </nav>
     <!-- Topbar -->
     <header class="col-md-12 col-sm-12 topbar">
-        <div class="col-offset-md-4 col-md-8 col-offset-lg-4 col-lg-8">
+        <div class="col-offset-md-4 col-md-8 col-offset-lg-4 col-lg-8 col-offset-sm-2 col-sm-10">
             <div class="container">
                 <div class="row">
                     <ul class="list-group list-group-horizontal">
@@ -119,10 +145,10 @@
                         </div>
                         <div class="col-offset-md-2 col-md-8 col-offset-md-2 graph-chart">
                             <h4 class="graph-title">Earning chart</h4>
-                            <canvas id="myChart"></canvas>
-                            <div class="scroll-wrapper">
+                            <canvas id="myChart" width="550" height="400"></canvas>
+                            <!-- <div class="scroll-wrapper">
                                 <img class="graph table" src="images/icons/graph.svg">
-                            </div>
+                            </div> -->
                         </div>
                     </div>
                 </div>

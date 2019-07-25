@@ -7,6 +7,28 @@ document.querySelector('.navbar-menu').addEventListener('click', function (e) {
     toggleMenu()
 });
 
+// Validate email
+document.querySelector('form').addEventListener('submit', function (event) {
+    var isFormValidate = true;
+
+    var emailAddressInput = event.target.querySelector('input[name="email_address"]')
+    if (emailAddressInput.value.indexOf('@') < 0) {
+        isFormValidate = false;
+        emailAddressInput.parentElement.querySelector('.error').innerHTML = 'Błędny adres e-mail';
+    }
+
+    return !isFormValidate ? event.preventDefault() : true;
+})
+
+// Modal
+function openModal(modal) {
+    document.querySelectorAll('#overlay > *').forEach(function (modal) {
+        modal.classList.remove('show')
+    })
+    document.querySelector('#overlay').classList.add('show')
+    document.querySelector(modal).classList.add('show')
+}
+
 function closeModal() {
     document.getElementById('overlay').classList.remove('show')
 }
@@ -30,14 +52,6 @@ document.addEventListener('keyup', function (e) {
     }
 })
 
-function openModal(modal) {
-    document.querySelectorAll('#overlay > *').forEach(function (modal) {
-        modal.classList.remove('show')
-    })
-    document.querySelector('#overlay').classList.add('show')
-    document.querySelector(modal).classList.add('show')
-}
-
 document.querySelector('#quit').addEventListener('click', function () {
     openModal('#myModal')
 })
@@ -49,7 +63,7 @@ document.querySelector('.add-new').addEventListener('click', function () {
 // Chart
 var ctx = document.getElementById('myChart').getContext('2d');
 
-var chart = new Chart(ctx, {
+var Chart = new Chart(ctx, {
     // 1
     type: 'bar',
     data: {

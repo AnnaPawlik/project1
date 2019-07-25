@@ -1077,14 +1077,14 @@ select {
   z-index: 1;
   background-color: #191919;
   height: 100vh;
-  width: 15vw;
+  width: auto;
   float: left;
   -webkit-transition: all .3s ease-in-out;
   transition: all .3s ease-in-out;
 }
 
 .navbar.hide {
-  left: -150px;
+  left: -140px;
 }
 
 .navbar h3 {
@@ -1093,6 +1093,7 @@ select {
   font-family: 'Dancing Script', cursive;
   line-height: 30px;
   padding: 10px 0px;
+  margin-right: 20px;
 }
 
 .navbar .navbar-menu i {
@@ -1119,6 +1120,7 @@ select {
   letter-spacing: -0.28px;
   margin-top: 10px;
   padding: 10px 0px;
+  margin-right: 20px;
 }
 
 .navbar .team-manager .manager {
@@ -1126,6 +1128,7 @@ select {
   font-size: 14px;
   color: #56819F;
   padding: 10px 0px;
+  margin-right: 20px;
 }
 
 .navbar .team-manager .manager .photo {
@@ -1146,10 +1149,11 @@ select {
     position: absolute;
     left: -500px;
     width: 60vw;
+    height: 100vh;
   }
   .navbar .navbar-menu i {
     position: absolute;
-    top: 0px;
+    top: 10px;
     left: 550px;
   }
   .navbar.hide {
@@ -1158,8 +1162,8 @@ select {
   }
   .navbar.hide .navbar-menu i {
     position: absolute;
-    top: 0px;
-    left: 150px;
+    top: 5px;
+    left: 200px;
   }
   .navbar h3 {
     display: none;
@@ -1171,8 +1175,8 @@ select {
 
 @media (min-width: 768px) and (max-width: 992px) {
   .navbar {
-    height: 100vh;
-    width: 20vw;
+    height: 150vh;
+    width: auto;
   }
 }
 
@@ -1187,14 +1191,33 @@ select {
   display: inline-block;
 }
 
+.topbar_mobile {
+  display: none;
+}
+
 @media (max-width: 767px) {
-  .topbar {
-    position: relative;
-    top: 0;
-    right: 0px;
+  .topbar_mobile {
+    display: block;
   }
-  .topbar .list-group-item {
-    font-size: 10px;
+  .topbar_mobile .icon {
+    display: block;
+    position: absolute;
+    right: 10px;
+    bottom: 15px;
+  }
+  .topbar_mobile .list-group {
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+  }
+  .topbar_mobile .list-group-item {
+    display: inline-block;
+    border: none;
+    padding: 5px;
+  }
+  .topbar {
+    display: none;
   }
 }
 
@@ -1203,7 +1226,7 @@ select {
   background-color: #ffffff;
   -webkit-box-shadow: 2px 2px 2px #979797;
           box-shadow: 2px 2px 2px #979797;
-  margin: 50px 10px;
+  margin: 50px 5px;
   padding: 15px;
 }
 
@@ -1255,7 +1278,7 @@ select {
   background-color: #ffffff;
   -webkit-box-shadow: 2px 2px 2px #979797;
           box-shadow: 2px 2px 2px #979797;
-  margin: 50px 10px;
+  margin: 50px 5px;
   padding: 15px;
 }
 

@@ -5,12 +5,12 @@
     z-index: 1;
     background-color: $bgcolor-navbar;
     height: 100vh;
-    width: 15vw;
+    width: auto;
     float: left;
     transition: all .3s ease-in-out;
 
     &.hide {
-        left: -150px;
+        left: -140px;
     }
 
     h3 {
@@ -75,10 +75,11 @@
         position: absolute;
         left: -500px;
         width: 60vw;
+        height: 100vh;
 
         .navbar-menu i {
             position: absolute;
-            top: 0px;
+            top: 10px;
             left: 550px;
         }
 
@@ -88,8 +89,8 @@
 
             .navbar-menu i {
                 position: absolute;
-                top: 0px;
-                left: 150px;
+                top: 5px;
+                left: 200px;
             }
         }
 
@@ -101,13 +102,11 @@
             display: none;
         }
     }
-
-
 }
 
 @media (min-width:768px) and (max-width:992px) {
     .navbar {
-        height: 100vh;
-        width: 20vw;
+        height: 150vh;
+        width: auto;
     }
 }
