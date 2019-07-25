@@ -773,9 +773,6 @@ template {
 }
 
 @media (max-width: 767px) {
-  .list-group {
-    margin-top: 10px;
-  }
   .list-group-item {
     text-align: center;
     font-size: 30px;
@@ -954,6 +951,21 @@ input[type="range"]::-webkit-slider-thumb {
   border-bottom: 25px solid #F58220;
 }
 
+input[type="range"]::-moz-range-thumb {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  position: relative;
+  top: 15px;
+  width: 0px;
+  height: 0px;
+  background-color: transparent;
+  border-radius: 0;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-bottom: 25px solid #F58220;
+}
+
 textarea {
   resize: none;
   border: 1px solid #E3E3E3;
@@ -1054,13 +1066,13 @@ select {
   color: #ffffff;
   font-size: 30px;
   font-family: 'Dancing Script', cursive;
-  line-height: 50px;
+  line-height: 30px;
   padding: 10px 0px;
 }
 
 .navbar .navbar-menu i {
   position: absolute;
-  top: 10px;
+  top: 0px;
   right: 10px;
   font-size: 30px;
   line-height: 50px;
@@ -1109,13 +1121,18 @@ select {
     left: -500px;
     width: 60vw;
   }
+  .navbar .navbar-menu i {
+    position: absolute;
+    top: 0px;
+    left: 550px;
+  }
   .navbar.hide {
     left: 0px;
     text-align: center;
   }
   .navbar.hide .navbar-menu i {
     position: absolute;
-    top: 10px;
+    top: 0px;
     left: 150px;
   }
   .navbar h3 {
@@ -1123,11 +1140,6 @@ select {
   }
   .navbar .icon {
     display: none;
-  }
-  .navbar-menu i {
-    position: relative;
-    top: 0px;
-    left: 550px;
   }
 }
 
@@ -1151,7 +1163,12 @@ select {
 
 @media (max-width: 767px) {
   .topbar {
-    display: none;
+    position: relative;
+    top: 0;
+    right: 0px;
+  }
+  .topbar .list-group-item {
+    font-size: 10px;
   }
 }
 

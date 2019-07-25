@@ -11,6 +11,12 @@
 
 @media (max-width:767px) {
     .topbar {
-        display: none;
+        position: relative;
+        top: 0;
+        right: 0px;
+
+        .list-group-item {
+            font-size: 10px;
+        }
     }
 }

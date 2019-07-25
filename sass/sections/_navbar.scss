@@ -17,7 +17,7 @@
         color: #ffffff;
         font-size: $large-font-size;
         font-family: 'Dancing Script', cursive;
-        line-height: 50px;
+        line-height: 30px;
         @include margin;
 
     }
@@ -25,7 +25,7 @@
     .navbar-menu {
         i {
             position: absolute;
-            top: 10px;
+            top: 0px;
             right: 10px;
             font-size: $large-font-size;
             line-height: 50px;
@@ -76,13 +76,19 @@
         left: -500px;
         width: 60vw;
 
+        .navbar-menu i {
+            position: absolute;
+            top: 0px;
+            left: 550px;
+        }
+
         &.hide {
             left: 0px;
             text-align: center;
 
             .navbar-menu i {
                 position: absolute;
-                top: 10px;
+                top: 0px;
                 left: 150px;
             }
         }
@@ -96,11 +102,7 @@
         }
     }
 
-    .navbar-menu i {
-        position: relative;
-        top: 0px;
-        left: 550px;
-    }
+
 }
 
 @media (min-width:768px) and (max-width:992px) {
