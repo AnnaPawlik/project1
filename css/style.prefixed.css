@@ -889,23 +889,54 @@ label {
   padding-bottom: 10px;
 }
 
-label input[type="checkbox"] {
-  position: absolute;
-  margin: 0;
-  width: 14px;
-  height: 14px;
-  opacity: 0;
+.container_checkbox {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
-label input[type="checkbox"] + .icon {
-  display: inline-block;
-  width: 14px;
-  height: 14px;
+.container_checkbox .checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 15px;
+  width: 15px;
+  background-color: #ffffff;
   border: 1px solid #E3E3E3;
 }
 
-label input[type="checkbox"]:checked + .icon {
-  background-color: #E3E3E3;
+.container_checkbox .checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+  left: 3px;
+  top: 2px;
+  width: 5px;
+  height: 5px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+.container_checkbox input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.container_checkbox input:checked ~ .checkmark {
+  background-color: #27ae60;
+}
+
+.container_checkbox input:checked ~ .checkmark:after {
+  display: block;
 }
 
 input[type="text"],
@@ -1053,7 +1084,6 @@ select {
   z-index: 1;
   background-color: #191919;
   height: 100vh;
-  width: auto;
   float: left;
   transition: all .3s ease-in-out;
 }
@@ -1085,6 +1115,12 @@ select {
 
 .navbar .team-manager {
   border-top: 1px solid #bababa;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: start;
+      justify-content: flex-start;
+  -ms-flex-direction: column;
+  flex-direction: column;
 }
 
 .navbar .team-manager h2 {
@@ -1098,7 +1134,8 @@ select {
 }
 
 .navbar .team-manager .manager {
-  position: relative;
+  display: -ms-flexbox;
+  display: flex;
   font-size: 14px;
   color: #56819F;
   padding: 10px 0px;
@@ -1112,10 +1149,11 @@ select {
 }
 
 .navbar .team-manager .manager p {
-  display: inline-block;
-  position: absolute;
-  top: 25px;
-  left: 50px;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center;
+  margin-left: 10px;
 }
 
 @media (max-width: 767px) {
@@ -1144,6 +1182,12 @@ select {
   }
   .navbar .icon {
     display: none;
+  }
+  .navbar .manager {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+        justify-content: center;
   }
 }
 
