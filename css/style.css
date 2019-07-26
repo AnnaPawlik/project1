@@ -779,6 +779,7 @@ template {
 @media (max-width: 767px) {
   .list-group-item {
     text-align: center;
+    padding: 2px 5px;
     font-size: 30px;
   }
 }
@@ -1095,13 +1096,6 @@ select {
   display: block;
 }
 
-.modal .btn-close {
-  position: absolute;
-  top: 0;
-  right: 0;
-  padding: 5px 10px;
-}
-
 .navbar {
   position: fixed;
   top: 0;
@@ -1115,12 +1109,12 @@ select {
 }
 
 .navbar.hide {
-  left: -140px;
+  left: -150px;
 }
 
 .navbar h3 {
   color: #ffffff;
-  font-size: 30px;
+  font-size: 24px;
   font-family: 'Dancing Script', cursive;
   line-height: 30px;
   padding: 10px 0px;
@@ -1250,28 +1244,29 @@ select {
 }
 
 @media (max-width: 767px) {
+  .topbar {
+    display: none;
+  }
   .topbar_mobile {
-    display: block;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
   .topbar_mobile .icon {
-    display: block;
-    position: absolute;
-    right: 10px;
-    bottom: 15px;
+    display: inline;
   }
   .topbar_mobile .list-group {
     width: 100%;
-    position: absolute;
-    left: 0;
-    bottom: 0;
   }
-  .topbar_mobile .list-group-item {
+  .topbar_mobile .list-group .list-group-item {
     display: inline-block;
     border: none;
-    padding: 5px;
-  }
-  .topbar {
-    display: none;
   }
 }
 

@@ -14,31 +14,26 @@
 }
 
 @media (max-width:767px) {
+    .topbar {
+        display: none;
+    }
+
     .topbar_mobile {
-        display: block;
+        display: flex;
+        justify-content: center;
+        align-items: center;
 
         .icon {
-            display: block;
-            position: absolute;
-            right: 10px;
-            bottom: 15px;
+            display: inline;
         }
 
         .list-group {
             width: 100%;
-            position: absolute;
-            left: 0;
-            bottom: 0;
-        }
 
-        .list-group-item {
-            display: inline-block;
-            border: none;
-            padding: 5px;
+            .list-group-item {
+                display: inline-block;
+                border: none;
+            }
         }
-    }
-
-    .topbar {
-        display: none;
     }
 }
