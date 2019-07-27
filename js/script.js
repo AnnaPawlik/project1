@@ -39,12 +39,13 @@ document.addEventListener('keyup', function (e) {
     }
 })
 
-document.querySelector('#quit').addEventListener('click', function () {
+
+document.querySelector('.quit').addEventListener('click', function () {
     openModal('#myModal')
 })
 
-// document.querySelector('.add-new').addEventListener('click', function () {
-//     openModal('#modal_add')
+// document.querySelector('.banner-new').addEventListener('click', function () {
+//     openModal('#modalBanner')
 // })
 
 // Chart

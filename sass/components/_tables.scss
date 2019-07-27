@@ -9,11 +9,15 @@
         display: flex;
         width: 100%;
 
+        svg {
+            display: none;
+        }
+
         &:hover {
             background-color: $table-hover;
             cursor: pointer;
 
-            .icon-table-hover {
+            svg {
                 display: inline-block;
             }
         }
@@ -42,6 +46,10 @@
     .links {
         .table-row {
             flex-direction: column;
+
+            svg {
+                display: inline-block;
+            }
         }
     }
 

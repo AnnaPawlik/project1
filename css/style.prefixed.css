@@ -84,8 +84,7 @@ abbr[title] {
   /* 1 */
   text-decoration: underline;
   /* 2 */
-  -webkit-text-decoration: underline dotted;
-          text-decoration: underline dotted;
+  text-decoration: underline dotted;
   /* 2 */
 }
 
@@ -712,18 +711,18 @@ template {
   height: 40px;
 }
 
-.icon {
+svg {
   width: 16px;
   height: 14px;
   margin: 0px 10px;
 }
 
-.icon-table-hover {
-  display: none;
+svg:hover {
+  fill: #FFA200;
 }
 
 @media (max-width: 767px) {
-  .icon-table-hover {
+  svg {
     display: inline-block;
   }
 }
@@ -784,7 +783,7 @@ template {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-direction: row;
-  flex-direction: row;
+      flex-direction: row;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   -ms-flex-pack: distribute;
@@ -798,12 +797,16 @@ template {
   width: 100%;
 }
 
+.table .table-row svg {
+  display: none;
+}
+
 .table .table-row:hover {
   background-color: #f1f3f3;
   cursor: pointer;
 }
 
-.table .table-row:hover .icon-table-hover {
+.table .table-row:hover svg {
   display: inline-block;
 }
 
@@ -831,11 +834,14 @@ template {
 @media (max-width: 767px) {
   .links .table-row {
     -ms-flex-direction: column;
-    flex-direction: column;
+        flex-direction: column;
+  }
+  .links .table-row svg {
+    display: inline-block;
   }
   .general-statistic .table-row {
     -ms-flex-direction: row;
-    flex-direction: row;
+        flex-direction: row;
   }
   .table-item {
     text-align: center;
@@ -852,7 +858,7 @@ form {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-direction: column;
-  flex-direction: column;
+      flex-direction: column;
   -ms-flex-align: center;
       align-items: center;
 }
@@ -1103,8 +1109,8 @@ select {
   line-height: 50px;
 }
 
-.navbar .icon {
-  filter: invert(60%);
+.navbar svg {
+  fill: #979797;
 }
 
 .navbar .team-manager {
@@ -1114,7 +1120,7 @@ select {
   -ms-flex-pack: start;
       justify-content: flex-start;
   -ms-flex-direction: column;
-  flex-direction: column;
+      flex-direction: column;
 }
 
 .navbar .team-manager h2 {
@@ -1174,7 +1180,7 @@ select {
   .navbar h3 {
     display: none;
   }
-  .navbar .icon {
+  .navbar svg {
     display: none;
   }
   .navbar .manager {

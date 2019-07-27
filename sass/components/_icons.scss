@@ -1,15 +1,15 @@
-.icon {
+svg {
     width: 16px;
     height: 14px;
     margin: 0px 10px;
-}
 
-.icon-table-hover {
-    display: none;
+    &:hover {
+        fill: $links-hover;
+    }
 }
 
 @media (max-width: 767px) {
-    .icon-table-hover {
+    svg {
         display: inline-block;
     }
 }
