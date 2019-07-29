@@ -40,6 +40,8 @@
         display: flex;
         justify-content: flex-start;
         flex-direction: column;
+        padding-left: 15px;
+
 
         h2 {
             font-size: $small-font-size;
@@ -90,7 +92,7 @@
 
             .navbar-menu i {
                 position: absolute;
-                top: 5px;
+                top: 0px;
                 left: 200px;
             }
         }

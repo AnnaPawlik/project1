@@ -1,3 +1,5 @@
+'use strict';
+
 function toggleMenu(visible) {
     document.querySelector('.navbar').classList.toggle('hide', visible)
 }
@@ -8,14 +10,6 @@ document.querySelector('.navbar-menu').addEventListener('click', function (e) {
 });
 
 // Modal
-function openModal(modal) {
-    document.querySelectorAll('#overlay > *').forEach(function (modal) {
-        modal.classList.remove('show')
-    })
-    document.querySelector('#overlay').classList.add('show')
-    document.querySelector(modal).classList.add('show')
-}
-
 function closeModal() {
     document.getElementById('overlay').classList.remove('show')
 }
@@ -39,14 +33,19 @@ document.addEventListener('keyup', function (e) {
     }
 })
 
+function openModal(modal) {
+    document.querySelectorAll('#overlay > *').forEach(function (modal) {
+        modal.classList.remove('show')
+    })
+    document.querySelector('#overlay').classList.add('show')
+    document.querySelector(modal).classList.add('show')
+}
+
+// document.querySelector('.quit').addEventListener('click', openModal('#myModal'));
 
 document.querySelector('.quit').addEventListener('click', function () {
-    openModal('#myModal')
+    openModal('#myModal');
 })
-
-// document.querySelector('.banner-new').addEventListener('click', function () {
-//     openModal('#modalBanner')
-// })
 
 // Chart
 var ctx = document.getElementById('myChart').getContext('2d');
@@ -84,6 +83,7 @@ var Chart = new Chart(ctx, {
         ]
     },
 });
+
 
 // Validate email
 // document.querySelector('form').addEventListener('submit', function (event) {

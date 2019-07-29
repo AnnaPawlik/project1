@@ -84,7 +84,8 @@ abbr[title] {
   /* 1 */
   text-decoration: underline;
   /* 2 */
-  text-decoration: underline dotted;
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted;
   /* 2 */
 }
 
@@ -783,7 +784,7 @@ svg:hover {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-direction: row;
-      flex-direction: row;
+  flex-direction: row;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   -ms-flex-pack: distribute;
@@ -834,14 +835,14 @@ svg:hover {
 @media (max-width: 767px) {
   .links .table-row {
     -ms-flex-direction: column;
-        flex-direction: column;
+    flex-direction: column;
   }
   .links .table-row svg {
     display: inline-block;
   }
   .general-statistic .table-row {
     -ms-flex-direction: row;
-        flex-direction: row;
+    flex-direction: row;
   }
   .table-item {
     text-align: center;
@@ -858,7 +859,7 @@ form {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-direction: column;
-      flex-direction: column;
+  flex-direction: column;
   -ms-flex-align: center;
       align-items: center;
 }
@@ -1077,6 +1078,13 @@ select {
   display: block;
 }
 
+.modal .btn-close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 5px 10px;
+}
+
 .navbar {
   position: fixed;
   top: 0;
@@ -1120,7 +1128,8 @@ select {
   -ms-flex-pack: start;
       justify-content: flex-start;
   -ms-flex-direction: column;
-      flex-direction: column;
+  flex-direction: column;
+  padding-left: 15px;
 }
 
 .navbar .team-manager h2 {
@@ -1174,7 +1183,7 @@ select {
   }
   .navbar.hide .navbar-menu i {
     position: absolute;
-    top: 5px;
+    top: 0px;
     left: 200px;
   }
   .navbar h3 {
@@ -1256,6 +1265,10 @@ select {
   padding: 10px 30px 10px 10px;
   margin: -3px;
   font-family: "Open Sans", Helvetica, Arial;
+}
+
+.calendar .btn svg:hover {
+  fill: #ffffff;
 }
 
 .graph-chart {
