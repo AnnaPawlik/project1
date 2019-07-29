@@ -6,11 +6,7 @@
     background-color: $bgcolor-navbar;
     height: 100vh;
     float: left;
-    transition: all .3s ease-in-out;
-
-    &.hide {
-        left: -150px;
-    }
+    transition: all .2s ease-in-out;
 
     h3 {
         color: #ffffff;
@@ -83,7 +79,7 @@
         .navbar-menu i {
             position: absolute;
             top: 10px;
-            left: 550px;
+            right: -600px;
         }
 
         &.hide {
@@ -93,7 +89,8 @@
             .navbar-menu i {
                 position: absolute;
                 top: 0px;
-                left: 200px;
+                right: 10px;
+                z-index: 2;
             }
         }
 

@@ -1118,12 +1118,8 @@ select {
   background-color: #191919;
   height: 100vh;
   float: left;
-  -webkit-transition: all .3s ease-in-out;
-  transition: all .3s ease-in-out;
-}
-
-.navbar.hide {
-  left: -150px;
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
 }
 
 .navbar h3 {
@@ -1208,7 +1204,7 @@ select {
   .navbar .navbar-menu i {
     position: absolute;
     top: 10px;
-    left: 550px;
+    right: -600px;
   }
   .navbar.hide {
     left: 0px;
@@ -1217,7 +1213,8 @@ select {
   .navbar.hide .navbar-menu i {
     position: absolute;
     top: 0px;
-    left: 200px;
+    right: 10px;
+    z-index: 2;
   }
   .navbar h3 {
     display: none;
