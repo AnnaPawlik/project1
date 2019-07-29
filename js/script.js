@@ -9,44 +9,6 @@ document.querySelector('.navbar-menu').addEventListener('click', function (e) {
     toggleMenu()
 });
 
-// Modal
-function closeModal() {
-    document.getElementById('overlay').classList.remove('show')
-}
-
-document.querySelectorAll('#overlay .js--close-modal').forEach(function (btn) {
-    btn.addEventListener('click', function (e) {
-        e.preventDefault()
-        closeModal()
-    })
-})
-
-document.querySelector('#overlay').addEventListener('click', function (e) {
-    if (e.target === this) {
-        closeModal()
-    }
-})
-
-document.addEventListener('keyup', function (e) {
-    if (e.keyCode === 27) {
-        closeModal()
-    }
-})
-
-function openModal(modal) {
-    document.querySelectorAll('#overlay > *').forEach(function (modal) {
-        modal.classList.remove('show')
-    })
-    document.querySelector('#overlay').classList.add('show')
-    document.querySelector(modal).classList.add('show')
-}
-
-// document.querySelector('.quit').addEventListener('click', openModal('#myModal'));
-
-document.querySelector('.quit').addEventListener('click', function () {
-    openModal('#myModal');
-})
-
 // Chart
 var ctx = document.getElementById('myChart').getContext('2d');
 
@@ -83,6 +45,47 @@ var Chart = new Chart(ctx, {
         ]
     },
 });
+
+
+// Modal
+function closeModal() {
+    document.getElementById('overlay').classList.remove('show')
+}
+
+document.querySelectorAll('#overlay .js--close-modal').forEach(function (btn) {
+    btn.addEventListener('click', function (e) {
+        e.preventDefault()
+        closeModal()
+    })
+})
+
+document.querySelector('#overlay').addEventListener('click', function (e) {
+    if (e.target === this) {
+        closeModal()
+    }
+})
+
+document.addEventListener('keyup', function (e) {
+    if (e.keyCode === 27) {
+        closeModal()
+    }
+})
+
+function openModal(modal) {
+    document.querySelectorAll('#overlay > *').forEach(function (modal) {
+        modal.classList.remove('show')
+    })
+    document.querySelector('#overlay').classList.add('show')
+    document.querySelector(modal).classList.add('show')
+}
+
+document.querySelector('.quit').addEventListener('click', function () {
+    openModal('#myModal')
+})
+
+document.querySelector('.add-links').addEventListener('click', function () {
+    openModal('#myModalLinks')
+})
 
 
 // Validate email

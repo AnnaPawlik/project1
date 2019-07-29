@@ -122,7 +122,8 @@
                 <div class="row">
                     <ul class="list-group list-group-horizontal">
                         <li class="list-group-item">
-                            <a href="#"><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                            <a href="#">
+                                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
                                     xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 17 18"
                                     style="enable-background:new 0 0 17 18;" xml:space="preserve">
                                     <path
@@ -167,7 +168,7 @@
                             </a>
                             <div class="overlay" id="overlay">
                                 <div class="modal" id="myModal">
-                                    <h3>Do you really want to Quit?</h3>
+                                    <h3 class="modal-title">Do you really want to Quit?</h3>
                                     <button class="btn btn-secondary btn-lg js--close-modal">Cancel</button>
                                     <button class="btn btn-primary btn-lg js--close-modal">Quit</button>
                                 </div>
@@ -241,7 +242,212 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-12 col-sm-12 container-fluid">
-                        <button class="btn btn-primary btn-lg">+ add new</button>
+                        <button class="btn btn-primary btn-lg add-links">+ add new</button>
+                        <!-- Modal -->
+                        <div class="overlay" id="overlayLinks">
+                            <div class="modal" id="myModalLinks">
+                                <div class="btn close js--close-modal">x</div>
+                                <div class="links">
+                                    <div class="row">
+                                        <div class="col-md-12 section-header">
+                                            <h3 class="section-title">Add Url</h3>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-12 col-sm-12">
+                                            <div class="col-md-4 col-sm-4">
+                                                <form class="form-inline" action="" method="POST">
+                                                    <div class="field">
+                                                        <label>Scheme name</label>
+                                                        <input type="text" placeholder="Name">
+                                                    </div>
+                                                </form>
+                                            </div>
+                                            <div class="col-md-4 col-sm-4">
+                                                <form class="form-inline" action="" method="POST">
+                                                    <div class="field">
+                                                        <label>Compain compain</label>
+                                                        <select name="compain">
+                                                            <option>Select</option>
+                                                            <option>Select</option>
+                                                            <option>Select</option>
+                                                        </select>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                            <div class="col-md-4 col-sm-4">
+                                                <form class="form-inline" action="" method="POST">
+                                                    <div class="field">
+                                                        <label>Language</label>
+                                                        <select name="language">
+                                                            <option>EN</option>
+                                                            <option>PL</option>
+                                                            <option>FR</option>
+                                                        </select>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                            <div class="col-md-4 col-sm-4">
+                                                <form class="form-inline" action="" method="POST">
+                                                    <div class="field">
+                                                        <label>Weight-Height</label>
+                                                        <select name="weight-height">
+                                                            <option>Select</option>
+                                                            <option>Select</option>
+                                                            <option>Select</option>
+                                                        </select>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                            <div class="col-md-4 col-sm-4">
+                                                <form class="form-inline" action="" method="POST">
+                                                    <div class="field">
+                                                        <label>Design</label>
+                                                        <select name="design">
+                                                            <option>Select</option>
+                                                            <option>Select</option>
+                                                            <option>Select</option>
+                                                        </select>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                            <div class="col-md-4 col-sm-4">
+                                                <form class="form-inline" action="" method="POST">
+                                                    <div class="field">
+                                                        <label>File type</label>
+                                                        <select name="file">
+                                                            <option>All</option>
+                                                            <option>1</option>
+                                                            <option>2</option>
+                                                        </select>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                            </form>
+                                            <div class="col-md-6 col-sm-6">
+                                                <form class="form-inline form-checkbox" action="" method="POST">
+                                                    <div class="field">
+                                                        <label>Select banners</label>
+                                                    </div>
+                                                    <div class="field">
+                                                        <label>
+                                                            <input type="checkbox" name="banner">
+                                                            <div class="icon"></div>Banner main
+                                                        </label>
+                                                    </div>
+                                                    <div class="field">
+                                                        <label>
+                                                            <input type="checkbox" name="banner">
+                                                            <div class="icon"></div>Sign up banner
+                                                        </label>
+                                                    </div>
+                                                    <div class="field">
+                                                        <label>
+                                                            <input type="checkbox" name="banner">
+                                                            <div class="icon"></div>Left banner
+                                                        </label>
+                                                    </div>
+                                                    <div class="field">
+                                                        <label>
+                                                            <input type="checkbox" name="banner">
+                                                            <div class="icon"></div>Right banner
+                                                        </label>
+                                                    </div>
+                                                    <div class="field">
+                                                        <label>
+                                                            <input type="checkbox" name="banner">
+                                                            <div class="icon"></div>Bottom banner
+                                                        </label>
+                                                    </div>
+                                                    <div class="field">
+                                                        <label>
+                                                            <input type="checkbox" name="banner">
+                                                            <div class="icon"></div>Long banner
+                                                        </label>
+                                                    </div>
+                                                    <div class="field">
+                                                        <label>
+                                                            <input class="checkbox" name="banner">
+                                                            <div class="icon"></div>Personal cabinet banner
+                                                        </label>
+                                                    </div>
+                                                    <div class="field">
+                                                        <label>
+                                                            <input type="checkbox" name="banner">
+                                                            <div class="icon"></div>Popup banner
+                                                        </label>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                            <div class="col-md-6 col-sm-6">
+                                                <form class="form-inline form-checkbox" action="" method="POST">
+                                                    <div class="field">
+                                                        <label>Select websites</label>
+                                                    </div>
+                                                    <div class="field">
+                                                        <label>
+                                                            <input type="checkbox" name="website">
+                                                            <div class="icon"></div>Landing page Money
+                                                        </label>
+                                                    </div>
+                                                    <div class="field">
+                                                        <label>
+                                                            <input type="checkbox" name="website">
+                                                            <div class="icon"></div>LP Your choise
+                                                        </label>
+                                                    </div>
+                                                    <div class="field">
+                                                        <label>
+                                                            <input type="checkbox" name="website">
+                                                            <div class="icon"></div>LP Wallet
+                                                        </label>
+                                                    </div>
+                                                    <div class="field">
+                                                        <label>
+                                                            <input type="checkbox" name="website">
+                                                            <div class="icon"></div>E-shop 01
+                                                        </label>
+                                                    </div>
+                                                    <div class="field">
+                                                        <label>
+                                                            <input type="checkbox" name="website">
+                                                            <div class="icon"></div>Toy Store
+                                                        </label>
+                                                    </div>
+                                                    <div class="field">
+                                                        <label>
+                                                            <input type="checkbox" name="website">
+                                                            <div class="icon"></div>Book Store
+                                                        </label>
+                                                    </div>
+                                                    <div class="field">
+                                                        <label>
+                                                            <input class="checkbox" name="website">
+                                                            <div class="icon"></div>Charity
+                                                        </label>
+                                                    </div>
+                                                    <div class="field">
+                                                        <label>
+                                                            <input type="checkbox" name="website">
+                                                            <div class="icon"></div>LP Icons Store
+                                                        </label>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-12 col-sm-12 container-fluid">
+                                                <input type="text" placeholder="Generated link">
+                                                <input type="submit" name="copy" value="Copy link"
+                                                    class="btn btn-secondary btn-lg">
+                                                <input type="submit" name="save" value="Save"
+                                                    class="btn btn-primary btn-lg">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="row">
@@ -488,6 +694,7 @@
                         <button class="btn btn-primary btn-lg">+ add new</button>
                     </div>
                 </div>
+            </div>
         </section>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>

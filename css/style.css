@@ -1110,6 +1110,11 @@ select {
   padding: 5px 10px;
 }
 
+.modal-title {
+  color: #979797;
+  font-size: 16px;
+}
+
 .navbar {
   position: fixed;
   top: 0;
