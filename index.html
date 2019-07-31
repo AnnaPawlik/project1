@@ -158,7 +158,7 @@
                             </a>
                         </li>
                         <li class="list-group-item">
-                            <a href="#" class="quit">
+                            <a href="#" class="show-modal">
                                 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
                                     xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 19 15"
                                     style="enable-background:new 0 0 19 15;" xml:space="preserve">
@@ -166,7 +166,7 @@
                                         d="M13.9,3.1l-0.7,0.7L16.3,7H3v1h13.3l-3.1,3.1l0.7,0.7l4.4-4.4L13.9,3.1z M10,14H1V1h9v3h1V0H0v15h11v-4h-1V14z" />
                                 </svg>
                             </a>
-                            <div class="overlay" id="overlay">
+                            <div class="overlay" id="modal-overlay">
                                 <div class="modal" id="myModal">
                                     <h3 class="modal-title">Do you really want to Quit?</h3>
                                     <button class="btn btn-secondary btn-lg js--close-modal">Cancel</button>
@@ -242,9 +242,9 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-12 col-sm-12 container-fluid">
-                        <button class="btn btn-primary btn-lg add-links">+ add new</button>
+                        <button class="btn btn-primary btn-lg show-modal">+ add new</button>
                         <!-- Modal -->
-                        <div class="overlay" id="overlayLinks">
+                        <div class="overlay" id="modal-overlay-links">
                             <div class="modal" id="myModalLinks">
                                 <div class="btn close js--close-modal">x</div>
                                 <div class="links">

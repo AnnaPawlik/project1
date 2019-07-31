@@ -48,55 +48,96 @@ var Chart = new Chart(ctx, {
 
 
 // Modal
-function closeModal() {
-    document.getElementById('overlay').classList.remove('show')
-}
 
-document.querySelectorAll('#overlay .js--close-modal').forEach(function (btn) {
-    btn.addEventListener('click', function (e) {
-        e.preventDefault()
-        closeModal()
-    })
-})
+// function closeModal() {
+//     document.getElementById('overlay').classList.remove('show')
+// }
 
-document.querySelector('#overlay').addEventListener('click', function (e) {
-    if (e.target === this) {
-        closeModal()
+// document.querySelectorAll('#overlay .js--close-modal').forEach(function (btn) {
+//     btn.addEventListener('click', function (e) {
+//         e.preventDefault()
+//         closeModal()
+//     })
+// })
+
+// document.querySelector('#overlay').addEventListener('click', function (e) {
+//     if (e.target === this) {
+//         closeModal()
+//     }
+// })
+
+// document.addEventListener('keyup', function (e) {
+//     if (e.keyCode === 27) {
+//         closeModal()
+//     }
+// })
+
+// function openModal(modal) {
+//     document.querySelectorAll('#overlay > *').forEach(function (modal) {
+//         modal.classList.remove('show')
+//     })
+//     document.querySelector('#overlay').classList.add('show')
+//     document.querySelector(modal).classList.add('show')
+// }
+
+// document.querySelector('.quit').addEventListener('click', function () {
+//     openModal('#myModal')
+// })
+
+// document.querySelector('.add-links').addEventListener('click', function () {
+//     openModal('#myModalLinks')
+// })
+
+(function () {
+    var showModal = function (event) {
+        event.preventDefault();
+        document.querySelector('#modal-overlay').classList.add('show');
+        document.querySelector('.modal').classList.add('show');
+    };
+
+    var modalLinks = document.querySelectorAll('.show-modal');
+
+    for (var i = 0; i < modalLinks.length; i++) {
+        modalLinks[i].addEventListener('click', showModal);
     }
-})
 
-document.addEventListener('keyup', function (e) {
-    if (e.keyCode === 27) {
-        closeModal()
+    var hideModal = function (event) {
+        event.preventDefault();
+        document.querySelector('#modal-overlay').classList.remove('show');
+    };
+
+    var closeButtons = document.querySelectorAll('.modal .js--close-modal');
+
+    for (var i = 0; i < closeButtons.length; i++) {
+        closeButtons[i].addEventListener('click', hideModal);
     }
-})
 
-function openModal(modal) {
-    document.querySelectorAll('#overlay > *').forEach(function (modal) {
-        modal.classList.remove('show')
-    })
-    document.querySelector('#overlay').classList.add('show')
-    document.querySelector(modal).classList.add('show')
-}
+    document.querySelector('#modal-overlay').addEventListener('click', hideModal);
 
-document.querySelector('.quit').addEventListener('click', function () {
-    openModal('#myModal')
-})
+    var modals = document.querySelectorAll('.modal');
 
-document.querySelector('.add-links').addEventListener('click', function () {
-    openModal('#myModalLinks')
-})
+    for (var i = 0; i < modals.length; i++) {
+        modals[i].addEventListener('click', function (event) {
+            event.stopPropagation();
+        });
+    }
+})();
 
+
+
+// document.querySelector('.show-modal').addEventListener('click', function () {})
+
+// document.querySelector('.show-modal-links').addEventListener('click', function () {})
 
 // Validate email
-// document.querySelector('form').addEventListener('submit', function (event) {
-//     var isFormValidate = true;
+document.querySelector('form').addEventListener('submit', function (event) {
+    var isFormValidate = true;
 
-//     var emailAddressInput = event.target.querySelector('input[name="email_address"]')
-//     if (emailAddressInput.value.indexOf('@') < 0) {
-//         isFormValidate = false;
-//         emailAddressInput.parentElement.querySelector('.error').innerHTML = 'Błędny adres e-mail';
-//     }
+    var emailAddressInput = event.target.querySelector('input[name="email_address"]')
+    if (emailAddressInput.value.indexOf('@') < 0) {
+        isFormValidate = false;
+        emailAddressInput.parentElement.querySelector('.error').innerHTML = 'Błędny adres e-mail';
+    }
 
-//     return !isFormValidate ? event.preventDefault() : true;
-// })
+    return !isFormValidate ? event.preventDefault() : true;
+})
