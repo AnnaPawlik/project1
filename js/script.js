@@ -49,48 +49,12 @@ var Chart = new Chart(ctx, {
 
 // Modal
 
-// function closeModal() {
-//     document.getElementById('overlay').classList.remove('show')
-// }
-
-// document.querySelectorAll('#overlay .js--close-modal').forEach(function (btn) {
-//     btn.addEventListener('click', function (e) {
-//         e.preventDefault()
-//         closeModal()
-//     })
-// })
-
-// document.querySelector('#overlay').addEventListener('click', function (e) {
-//     if (e.target === this) {
-//         closeModal()
-//     }
-// })
-
-// document.addEventListener('keyup', function (e) {
-//     if (e.keyCode === 27) {
-//         closeModal()
-//     }
-// })
-
-// function openModal(modal) {
-//     document.querySelectorAll('#overlay > *').forEach(function (modal) {
-//         modal.classList.remove('show')
-//     })
-//     document.querySelector('#overlay').classList.add('show')
-//     document.querySelector(modal).classList.add('show')
-// }
-
-// document.querySelector('.quit').addEventListener('click', function () {
-//     openModal('#myModal')
-// })
-
-// document.querySelector('.add-links').addEventListener('click', function () {
-//     openModal('#myModalLinks')
-// })
-
 (function () {
     var showModal = function (event) {
         event.preventDefault();
+        for (var i = 0; i < document.querySelectorAll(".show-modal").length; i++) {
+            document.querySelectorAll(".modal")[i].classList.remove("show");
+        };
         document.querySelector('#modal-overlay').classList.add('show');
         document.querySelector('.modal').classList.add('show');
     };
@@ -122,12 +86,6 @@ var Chart = new Chart(ctx, {
         });
     }
 })();
-
-
-
-// document.querySelector('.show-modal').addEventListener('click', function () {})
-
-// document.querySelector('.show-modal-links').addEventListener('click', function () {})
 
 // Validate email
 document.querySelector('form').addEventListener('submit', function (event) {
