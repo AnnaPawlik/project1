@@ -27,7 +27,7 @@ form {
 }
 
 .range {
-    height: 234px;
+    height: 230px;
 }
 
 label {
@@ -38,13 +38,15 @@ label {
     width: 130px;
     margin-right: 10px;
     padding-bottom: 10px;
+    text-align: left;
 }
 
 .container_checkbox {
     display: block;
     position: relative;
-    padding-left: 35px;
+    padding-left: 30px;
     cursor: pointer;
+    text-align: left;
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
@@ -101,7 +103,7 @@ input[type="text"],
 
     &:focus {
         outline: none;
-        border: 2px solid $btn-primary;
+        border: 1px solid $btn-primary;
     }
 }
 

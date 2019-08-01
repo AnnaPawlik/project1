@@ -55,8 +55,6 @@ var Chart = new Chart(ctx, {
 
         var overlay = event.currentTarget.getAttribute('data-modal');
 
-        console.log(overlay);
-
         for (var i = 0; i < document.querySelectorAll(".show-modal").length; i++) {
             document.querySelectorAll(".modal")[i].classList.remove("show");
         };
