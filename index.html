@@ -158,7 +158,7 @@
                             </a>
                         </li>
                         <li class="list-group-item">
-                            <a href="#" class="show-modal">
+                            <a href="#" class="show-modal" data-modal="#myModal">
                                 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
                                     xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 19 15"
                                     style="enable-background:new 0 0 19 15;" xml:space="preserve">
@@ -167,8 +167,8 @@
                                 </svg>
                             </a>
                             <!-- Modal 1-->
-                            <div class="overlay" id="modal-overlay">
-                                <div class="modal" id="myModal">
+                            <div class="overlay" id="myModal">
+                                <div class="modal">
                                     <h3 class="modal-title">Do you really want to Quit?</h3>
                                     <button class="btn btn-secondary btn-lg js--close-modal">Cancel</button>
                                     <button class="btn btn-primary btn-lg js--close-modal">Quit</button>
@@ -243,10 +243,10 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-12 col-sm-12 container-fluid">
-                        <button class="btn btn-primary btn-lg show-modal">+ add new</button>
+                        <button class="btn btn-primary btn-lg show-modal" data-modal="#myModalLinks">+ add new</button>
                         <!-- Modal 2-->
-                        <div class="overlay" id="overlayLinks">
-                            <div class="modal" id="myModalLinks">
+                        <div class="overlay" id="myModalLinks">
+                            <div class="modal">
                                 <div class="btn close js--close-modal">x</div>
                                 <div class="links">
                                     <div class="row">

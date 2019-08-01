@@ -52,14 +52,20 @@ var Chart = new Chart(ctx, {
 (function () {
     var showModal = function (event) {
         event.preventDefault();
+
+        var overlay = event.currentTarget.getAttribute('data-modal');
+
+        console.log(overlay);
+
         for (var i = 0; i < document.querySelectorAll(".show-modal").length; i++) {
             document.querySelectorAll(".modal")[i].classList.remove("show");
         };
-        document.querySelector('#modal-overlay').classList.add('show');
-        document.querySelector('.modal').classList.add('show');
+        document.querySelector(overlay).classList.add('show');
+        document.querySelector(overlay + ' .modal').classList.add('show');
     };
 
     var modalLinks = document.querySelectorAll('.show-modal');
+    var overlays = document.querySelectorAll('.overlay');
 
     for (var i = 0; i < modalLinks.length; i++) {
         modalLinks[i].addEventListener('click', showModal);
@@ -67,7 +73,10 @@ var Chart = new Chart(ctx, {
 
     var hideModal = function (event) {
         event.preventDefault();
-        document.querySelector('#modal-overlay').classList.remove('show');
+
+        for (var i = 0; i < overlays.length; i++) {
+            overlays[i].classList.remove('show');
+        }
     };
 
     var closeButtons = document.querySelectorAll('.modal .js--close-modal');
@@ -76,7 +85,9 @@ var Chart = new Chart(ctx, {
         closeButtons[i].addEventListener('click', hideModal);
     }
 
-    document.querySelector('#modal-overlay').addEventListener('click', hideModal);
+    for (var i = 0; i < overlays.length; i++) {
+        overlays[i].addEventListener('click', hideModal);
+    }
 
     var modals = document.querySelectorAll('.modal');
 
@@ -86,6 +97,7 @@ var Chart = new Chart(ctx, {
         });
     }
 })();
+
 
 // Validate email
 document.querySelector('form').addEventListener('submit', function (event) {
